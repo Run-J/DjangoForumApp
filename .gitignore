@@ -1,0 +1,43 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment (if it's accidentally inside the project)
+venv/
+env/
+*.env
+.env
+
+# Django stuff
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+
+# Migrations (optional — if you want to exclude them)
+*/migrations/*.py
+*/migrations/*.pyc
+*/migrations/__pycache__/
+
+# VS Code / PyCharm / JetBrains IDEs
+.vscode/
+.idea/
+
+# MacOS metadata
+.DS_Store
+
+# Logs
+*.log
+
+# Coverage / test output
+htmlcov/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# Node / JS (if you're using JS frontend with Django)
+node_modules/
+build/
+dist/
