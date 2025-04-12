@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('posts.urls', namespace='posts')),
 ]
 
 # Add extra routes to urlpatterns that serve files from STATIC_ROOT when the URL starts with STATIC_URL.

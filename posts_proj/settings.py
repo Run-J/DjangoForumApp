@@ -62,7 +62,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [ BASE_DIR / 'templates' ], # 'DIRS' tells Django where to look for HTML templates that are not part of an individual app.
-        'APP_DIRS': True,
+        'APP_DIRS': True, # True is set, Django will automatically search inside each app’s templates/ folder.
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
