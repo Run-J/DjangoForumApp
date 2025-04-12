@@ -2,7 +2,7 @@ console.log("Hello Wrold!")
 
 const helloWroldBox = document.getElementById('hello-world');
 const postsBox = document.getElementById('posts-box');
-
+const spinnerBox = document.getElementById('spinner-box');
 
 // helloWroldBox.innerHTML = 'hello <i><b>world!<b><i>';
 
@@ -25,13 +25,17 @@ $.ajax({
     success: function(response){
         console.log(response)
         const data = response.data  // here is response.data, bcoz the 'data' is returned by load_post_data_view, instead of keyword.
-        console.log(data)
-        data.forEach(ele => {
-            //  here it's using ` isteaf of '
-            postsBox.innerHTML += `  
-                ${ele.title} - <b>${ele.body}</b> <br>
-            `
-        });
+        
+        setTimeout(() => {
+            spinnerBox.classList.add('not-visible')
+            console.log(data)
+            data.forEach(ele => {
+                //  here it's using ` isteaf of '
+                postsBox.innerHTML += `  
+                    ${ele.title} - <b>${ele.body}</b> <br>
+                `
+            });
+        }, 100);
     },
     error: function(response) {
         console.log(error)
